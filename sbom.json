@@ -2,10 +2,10 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
   "$profile": "cyclonedx-lite (podzbior: bez services/vulnerabilities/compositions)",
-  "serialNumber": "urn:uuid:fe55e06c-68ba-4d09-9043-37b28d067ebd",
+  "serialNumber": "urn:uuid:c90cda42-41b8-4a85-ae92-e522c4f5bf4a",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-19T19:34:47.891Z",
+    "timestamp": "2026-07-19T20:04:06.981Z",
     "tools": [
       {
         "vendor": "K0NSULT",
@@ -140,7 +140,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "6dc1a21ac578f63fd177b23cce31a7eb0bcc1f13f16ce656bb060544142f2e4f"
+          "content": "879ce4df98f6387bac276527ab80c6b40890a3effd207baeb3102aaaa6da45fc"
         }
       ],
       "properties": [
@@ -150,7 +150,7 @@
         },
         {
           "name": "k0nsult:bytes",
-          "value": "625"
+          "value": "636"
         },
         {
           "name": "k0nsult:surface",
