@@ -6,6 +6,9 @@ OPEN (Apache-2.0) — the Argentina strategy MODEL in model/.
 STATUS: model only. Public surfaces (like Cameroon's) are ROADMAP, not yet built
   (claim <= proof: we ship the model, not a claim of live surfaces).
 SEPARATE TRACK: NON-EU. Kept apart from the EU layer; own funding/support track.
-NOT INCLUDED: the proprietary k0nsult.cloud engine; personal data; secrets/keys.
+NOT INCLUDED: the proprietary k0nsult.cloud engine; personal data; secrets/keys;
+  the ipIII evidence-attestation module — a COMMERCIAL product currently for sale,
+  NOT open-sourced and NOT covered by the Apache-2.0 grant here (open-source only
+  conditionally, if unsold — operator Human Override).
 
 DOCTRINE: claim <= proof; Human Override Always; agents-not-people.
