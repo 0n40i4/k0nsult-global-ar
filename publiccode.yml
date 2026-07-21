@@ -3,7 +3,7 @@
 publiccodeYmlVersion: '0.4'
 name: 'k0nsult-global-ar'
 url: 'https://github.com/0n40i4/k0nsult-global-ar'
-releaseDate: '2026-07-20'
+releaseDate: '2026-07-21'
 softwareVersion: '1.0.0'
 developmentStatus: 'development'
 softwareType: 'standalone/other'
@@ -26,7 +26,7 @@ localisation:
     - 'en'
 description:
   en:
-    shortDescription: 'The Argentina node of the K0NSULT global-expansion track.'
+    shortDescription: 'The Argentina node of the K0NSULT global-expansion track: the strategy model plus evidence-first transparency surfaces (PL + EN).'
 x-k0nsult:
   doctrine:
     hidden_engine: true
@@ -37,14 +37,14 @@ x-k0nsult:
   evidence_reason: 'manifest hash + CycloneDX-1.5 SBOM + Apache-2.0 verified'
   manifest:
     path: 'sbom.json'
-    hash: 'sha256:7df84f8cbcdca354acc215040cca2a14bbe1f93d09d0369daa7d803862855b17'
+    hash: 'sha256:38d2f69fb755173ceee4769559d9af8ce1759636f925f4c8edf971099f3298c7'
     hash_alg: 'sha256'
   sbom:
     format: 'CycloneDX-1.5'
     path: 'sbom.json'
     url: 'https://github.com/0n40i4/k0nsult-global-ar/blob/master/sbom.json'
-    hash: 'sha256:10f3a4aac7cb7f716113e46fde7170b35fb09c735303a942d3854b5185d3a136'
+    hash: 'sha256:964217ec7b658128f2a4e572a80058cf2be9143980865a814669e652498bafb5'
   provenance_chain:
-    - manifest_hash: 'sha256:7df84f8cbcdca354acc215040cca2a14bbe1f93d09d0369daa7d803862855b17'
-      recorded_at: '2026-07-20T16:50:01.997Z'
+    - manifest_hash: 'sha256:38d2f69fb755173ceee4769559d9af8ce1759636f925f4c8edf971099f3298c7'
+      recorded_at: '2026-07-21T16:38:58.569Z'
       prev: null

@@ -2,10 +2,10 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
   "$profile": "cyclonedx-lite (podzbior: bez services/vulnerabilities/compositions)",
-  "serialNumber": "urn:uuid:747cbf37-ac8e-4678-a5cd-7bfb96b9a061",
+  "serialNumber": "urn:uuid:c0b635f0-daa2-4d61-a22d-5ca0ccfc2335",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-20T16:50:01.997Z",
+    "timestamp": "2026-07-21T16:38:58.569Z",
     "tools": [
       {
         "vendor": "K0NSULT",
@@ -45,7 +45,7 @@
       },
       {
         "name": "k0nsult:stats",
-        "value": "{\"total\":7,\"files_html\":0,\"data_json\":0,\"code_files\":0,\"other_files\":7,\"node_libraries\":0}"
+        "value": "{\"total\":11,\"files_html\":2,\"data_json\":0,\"code_files\":0,\"other_files\":9,\"node_libraries\":0}"
       }
     ]
   },
@@ -71,6 +71,70 @@
         {
           "name": "k0nsult:bytes",
           "value": "127"
+        },
+        {
+          "name": "k0nsult:eol",
+          "value": "lf-normalized"
+        },
+        {
+          "name": "k0nsult:surface",
+          "value": "open-source"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "surface:.github/workflows/verify.yml",
+      "name": "verify.yml",
+      "group": "other",
+      "version": "1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8406b6124728e2d134271756c519ac50ad0f0a76d30bee9960782cb47cc98046"
+        }
+      ],
+      "properties": [
+        {
+          "name": "k0nsult:path",
+          "value": ".github/workflows/verify.yml"
+        },
+        {
+          "name": "k0nsult:bytes",
+          "value": "1546"
+        },
+        {
+          "name": "k0nsult:eol",
+          "value": "lf-normalized"
+        },
+        {
+          "name": "k0nsult:surface",
+          "value": "open-source"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "surface:KNOWN-LIMITATIONS.md",
+      "name": "KNOWN-LIMITATIONS.md",
+      "group": "other",
+      "version": "1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c5b47cefe6f49c794e49d911e71607f8bd013f696385268522b21df3cb592b0e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "k0nsult:path",
+          "value": "KNOWN-LIMITATIONS.md"
+        },
+        {
+          "name": "k0nsult:bytes",
+          "value": "1591"
         },
         {
           "name": "k0nsult:eol",
@@ -220,7 +284,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "66829e1561fd5f5607a346d5b6d8a0e05eeb1b359e07e9d876eecbe3c754d53c"
+          "content": "3ce62573ff94a417cb6100475d81d731223b5b25d240acc29e2721c1349e0c91"
         }
       ],
       "properties": [
@@ -230,7 +294,7 @@
         },
         {
           "name": "k0nsult:bytes",
-          "value": "721"
+          "value": "2221"
         },
         {
           "name": "k0nsult:eol",
@@ -263,6 +327,70 @@
         {
           "name": "k0nsult:bytes",
           "value": "623"
+        },
+        {
+          "name": "k0nsult:eol",
+          "value": "lf-normalized"
+        },
+        {
+          "name": "k0nsult:surface",
+          "value": "open-source"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "surface:surfaces/ai-truth-argentyna-en.html",
+      "name": "ai-truth-argentyna-en.html",
+      "group": "html",
+      "version": "1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7027fbabeb03244f0128137a5802382e1645fb85947cf444fd4301efe8bef862"
+        }
+      ],
+      "properties": [
+        {
+          "name": "k0nsult:path",
+          "value": "surfaces/ai-truth-argentyna-en.html"
+        },
+        {
+          "name": "k0nsult:bytes",
+          "value": "24729"
+        },
+        {
+          "name": "k0nsult:eol",
+          "value": "lf-normalized"
+        },
+        {
+          "name": "k0nsult:surface",
+          "value": "open-source"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "surface:surfaces/ai-truth-argentyna.html",
+      "name": "ai-truth-argentyna.html",
+      "group": "html",
+      "version": "1.0.0",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b7900a7f8a108b190581cb07d5977332f5e095631d547086f395ceef6085b14b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "k0nsult:path",
+          "value": "surfaces/ai-truth-argentyna.html"
+        },
+        {
+          "name": "k0nsult:bytes",
+          "value": "24931"
         },
         {
           "name": "k0nsult:eol",

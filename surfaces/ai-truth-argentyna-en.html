@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#060b06">
+  <title>K0NSULT — Argentina / South America pillar. An open model of a trust and oversight layer | /ai-truth/argentyna/en</title>
+  <meta name="description" content="The 'Argentina / South America' pillar of the K0NSULT Global model: an open model (open-source proposal) for a trust and oversight layer for the 'companies managed by AI agents' proposed in Milei's draft bill. Cited context, thesis, 3 layers (Identity / Reputation-Proof / Oversight), explicit GAPs. This is a model analysis of the non-EU track — NOT a deployed service, NOT a claim of mandate.">
+  <link rel="canonical" href="https://k0nsult.cloud/ai-truth/argentyna/en" />
+  <link rel="alternate" hreflang="pl" href="https://k0nsult.cloud/ai-truth/argentyna" />
+  <link rel="alternate" hreflang="en" href="https://k0nsult.cloud/ai-truth/argentyna/en" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="K0NSULT">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="K0NSULT — Argentina pillar: an open model of a trust and oversight layer">
+  <meta property="og:description" content="Deregulation opens space but does not answer who is accountable for an AI agent's decisions. An open model (proposal), not a deployment. claim ≤ proof.">
+  <meta property="og:url" content="https://k0nsult.cloud/ai-truth/argentyna/en">
+  <meta property="og:image" content="https://k0nsult.cloud/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="K0NSULT — Argentina pillar (an open model, not a deployment)">
+  <meta name="twitter:description" content="An open oversight layer for AI-agent companies: DID, soulbound reputation, SHA-256 audit trail, Human Override. An open-source proposal.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"K0NSULT — Argentina / South America pillar. An open model of a trust and oversight layer","description":"An open model (open-source proposal) for a trust and oversight layer complementary to Argentina's AI deregulation policy. This is not a claim of deployment nor of adoption by the government of Argentina.","url":"https://k0nsult.cloud/ai-truth/argentyna/en","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"K0NSULT","url":"https://k0nsult.cloud"},"publisher":{"@type":"Organization","name":"K0NSULT Sp. z o.o.","url":"https://k0nsult.cloud","identifier":"KRS 0001239441"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://k0nsult.cloud/"},{"@type":"ListItem","position":2,"name":"ai-truth","item":"https://k0nsult.cloud/ai-truth"},{"@type":"ListItem","position":3,"name":"Argentina pillar","item":"https://k0nsult.cloud/ai-truth/argentyna/en"}]}}
+  </script>
+  <style>
+    :root{--bg:#060b06;--bg2:#0a0f0a;--panel:#0e160e;--border:#1a2e1a;--border2:#243c24;
+      --phosphor:#39ff14;--phosphor3:#166b0a;--amber:#ffb700;--red:#ff3333;--cyan:#00e5ff;--blue:#4488ff;
+      --text:#c8e8c8;--text2:#8ab08a;--text3:#4a6a4a;--font-mono:'JetBrains Mono','Share Tech Mono','Courier New',monospace;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:var(--font-mono);line-height:1.6;font-size:15px}
+    a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline;color:var(--phosphor)}
+    header{border-bottom:1px solid var(--border);background:var(--bg2);padding:.8rem 0;position:sticky;top:0;z-index:50}
+    .hdr{max-width:1400px;margin:0 auto;padding:0 1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem}
+    .brand{color:var(--phosphor);font-weight:700;font-size:1rem}.brand span{color:var(--text3);font-weight:400}
+    .topnav{display:flex;gap:.5rem;flex-wrap:wrap}
+    .topnav a{color:var(--text2);font-size:12px;padding:.2rem .5rem;border:1px solid var(--border);border-radius:3px}
+    .topnav a:hover,.topnav a.act{border-color:var(--phosphor3);color:var(--phosphor)}
+    .wrap{max-width:1080px;margin:0 auto;padding:1.4rem 1.2rem 4rem}
+    .hero{background:var(--panel);border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:6px;padding:1.4rem 1.6rem;margin-bottom:1.2rem}
+    .hero .claim{color:var(--cyan);font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
+    .hero .sub{color:var(--text2);font-size:14px}
+    .banner{border:1px solid var(--amber);background:rgba(255,183,0,.06);border-radius:5px;padding:.85rem 1.1rem;margin:1rem 0 1.4rem;color:var(--text);font-size:13.5px}
+    .banner strong{color:var(--amber)}
+    h2{color:var(--text);font-size:1.05rem;margin:1.9rem 0 .7rem;padding-bottom:.3rem;border-bottom:1px dashed var(--border2)}
+    h3{color:var(--cyan);font-size:.95rem;margin:1.1rem 0 .4rem}
+    p{margin:.5rem 0;color:var(--text2);font-size:14px}
+    ul{margin:.4rem 0 .6rem 1.3rem;color:var(--text2);font-size:14px}
+    li{margin:.25rem 0}
+    .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:.9rem 0 1.1rem}
+    @media(max-width:720px){.stat-row{grid-template-columns:1fr 1fr}}
+    .stat{background:var(--panel);border:1px solid var(--border2);border-radius:5px;padding:.7rem .8rem;text-align:center}
+    .stat .n{color:var(--phosphor);font-size:1.35rem;font-weight:700;display:block}
+    .stat .l{color:var(--text3);font-size:11px;text-transform:uppercase;letter-spacing:.4px;margin-top:.2rem}
+    .tbl-scroll{overflow-x:auto;margin:.8rem 0}
+    table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:720px}
+    caption{caption-side:top;text-align:left;color:var(--text3);font-size:11px;padding-bottom:.4rem}
+    th,td{text-align:left;padding:.55rem .65rem;border-bottom:1px solid var(--border);vertical-align:top}
+    th{color:var(--text3);text-transform:uppercase;font-size:10.5px;letter-spacing:.6px;border-bottom:1px solid var(--border2)}
+    td .item{color:var(--text);font-weight:700;display:block;margin-bottom:.15rem}
+    td .m{color:var(--text2);font-size:12px}
+    .tag{display:inline-block;font-size:10px;font-weight:700;padding:.1rem .38rem;border-radius:3px;letter-spacing:.4px;white-space:nowrap;border:1px solid var(--border2);color:var(--text2)}
+    .tag.d{color:var(--phosphor);border-color:var(--phosphor3)}
+    .tag.g{color:var(--amber);border-color:#6b5210}
+    .tag.n{color:var(--blue);border-color:#24406b}
+    .box{background:var(--panel);border:1px solid var(--border2);border-left:4px solid var(--phosphor3);border-radius:5px;padding:1rem 1.1rem;margin:1rem 0}
+    .box.warn{border-left-color:var(--amber)}
+    .box.blue{border-left-color:var(--blue)}
+    .box h3{margin-top:0;margin-bottom:.4rem}
+    .disclaimer{border:1px solid var(--border2);border-radius:4px;padding:.8rem 1rem;margin:1.6rem 0 .5rem;font-size:12px;color:var(--text3)}
+    .disclaimer b{color:var(--amber)}
+    .xlinks{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0 .4rem}
+    .xlinks a{border:1px solid var(--phosphor3);color:var(--phosphor);padding:.4rem .8rem;border-radius:4px;font-size:13px}
+    footer{border-top:1px solid var(--border);padding:1rem 1.2rem;margin-top:1rem;color:var(--text3);font-size:12px;max-width:1400px;margin-left:auto;margin-right:auto}
+    footer a{color:var(--text2)}
+    .src{font-size:11px}
+    code{font-family:var(--font-mono);color:var(--phosphor);font-size:12.5px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hdr">
+      <div class="brand">K0NSULT<span>&nbsp;//&nbsp;</span>AI Truth &amp; Governance Portal</div>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="/ai-truth/argentyna">PL</a>
+        <a href="/ai-truth/argentyna/en" class="act" aria-current="page">EN</a>
+        <a href="/ai-truth/tarcza">Shield</a>
+        <a href="/ai-truth/unia">EU Track</a>
+        <a href="/ai-truth/kamerun/en">Another Continent</a>
+        <a href="/ai-truth/kontakt">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1 class="claim">🌎 The "Argentina / South America" pillar — an open model</h1>
+      <p class="sub">A pillar of the K0NSULT global (non-EU) track. <strong>Status: OPEN MODEL / PROPOSAL (open-source)</strong>.
+        This is <strong>NOT</strong> a claim that AI governs any state, nor that the government of Argentina has adopted the
+        K0NSULT model. It is a proposal for a <strong>neutral, open trust and oversight layer</strong>, complementary to a
+        deregulatory policy. Portal rule: <strong>claim ≤ proof</strong>.</p>
+    </div>
+
+    <div class="banner">
+      <strong>How to read this — the status of this page:</strong> this is a <strong>model analysis of the non-EU track</strong>,
+      <strong>not a deployed service</strong>. The page renders the content of <code>model/MODEL_ARGENTYNA.md</code> and adds no
+      facts to it. The evidence classification is carried over 1:1: the "Context" section is <span class="tag d">CITED FACTS</span>
+      from the source; "Thesis" / "Three layers" / "Why this fits" are <span class="tag n">MODEL / NARRATIVE</span> (a proposal, not
+      a claim of fact); and "GAPs and limits" are explicit <span class="tag g">GAP</span>s. No sentence claims the model is
+      deployed or adopted.
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><span class="n">3</span><span class="l">pillars of the draft bill</span></div>
+      <div class="stat"><span class="n">3</span><span class="l">layers of the K0NSULT model</span></div>
+      <div class="stat"><span class="n">1602</span><span class="l">VOC — Milei's analogy</span></div>
+      <div class="stat"><span class="n">0</span><span class="l">pilots (deployment GAP)</span></div>
+    </div>
+    <p class="src">These tiles summarise the model document only. "0 pilots" restates the GAP section: as of today no K0NSULT pilot exists within the Argentine legal order.</p>
+
+    <h2>(1) Context — facts cited from the source</h2>
+    <p><strong>Date:</strong> end of May 2026. <strong>Source:</strong> cyberdefence24.pl — "Argentina, the first AI haven".</p>
+    <div class="tbl-scroll"><table>
+      <caption>Facts verified against the source material (a report on a draft bill and political statements).</caption>
+      <thead><tr><th>Item</th><th>Content</th><th>Class</th></tr></thead>
+      <tbody>
+        <tr><td><span class="item">Draft bill</span></td><td class="m">Argentina's president <strong>Javier Milei</strong> submitted to parliament (end of May 2026) a draft bill intended to make Argentina an <strong>"AI haven"</strong>.</td><td><span class="tag d">CITED FACT</span></td></tr>
+        <tr><td><span class="item">Pillar 1 — deregulation</span></td><td class="m">AI is to remain <strong>"unregulated"</strong>, on the assumption of free, unconstrained development.</td><td><span class="tag d">CITED FACT</span></td></tr>
+        <tr><td><span class="item">Pillar 2 — new legal category</span></td><td class="m"><strong>Companies managed by robots / AI agents</strong> — a new type of business entity.</td><td><span class="tag d">CITED FACT</span></td></tr>
+        <tr><td><span class="item">Pillar 3 — financial environment</span></td><td class="m">Low taxes, flexible company law, disclosure of beneficial owners.</td><td><span class="tag d">CITED FACT</span></td></tr>
+        <tr><td><span class="item">Historical analogy</span></td><td class="m">Milei used the analogy of the <strong>Dutch East India Company (VOC, 1602)</strong> — as a historical prototype of a breakthrough form of economic organisation.</td><td><span class="tag d">CITED FACT</span></td></tr>
+        <tr><td><span class="item">Programmatic rhetoric</span></td><td class="m">"AI will liberate humanity".</td><td><span class="tag d">CITED FACT</span></td></tr>
+        <tr><td><span class="item">Positioning vs the EU</span></td><td class="m">Explicitly contrasted with the EU approach (the AI Act) — regulation vs deregulation.</td><td><span class="tag d">CITED FACT</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="box warn">
+      <h3>⚠️ Honesty boundary</h3>
+      <p>The above is a <strong>report on a draft bill and political statements</strong>. Submitting a bill ≠ enacting it
+        ≠ implementing it. As of the date the model document was written, we treat this as a <strong>legislative
+        announcement</strong>, not binding law.</p>
+    </div>
+
+    <h2>(2) Thesis <span class="tag n">MODEL / NARRATIVE</span></h2>
+    <p>Deregulation <strong>creates space</strong> — it lowers the barrier to entry and permits new forms of entity
+      (agent-companies). But deregulation in itself <strong>does not answer the accountability question</strong>: who is
+      responsible for an AI agent's decision, how to prove what the agent did and why, how to distinguish an authorised action
+      from abuse.</p>
+    <p><strong>K0NSULT is not an alternative to deregulation — it is its complement.</strong> It supplies an
+      <strong>open-source oversight layer</strong> that makes agent-run management <strong>transparent and accountable</strong>
+      rather than a black box.</p>
+    <div class="box blue">
+      <h3>The logic is the inverse of a regulator's intuition</h3>
+      <p><strong>The less top-down regulation, the greater the value of a voluntary, open evidence layer.</strong>
+        When a state permits companies managed by AI agents, a layer that makes it possible to <strong>prove an agent's
+        identity, trace its decisions and keep a human as the superior instance</strong> becomes all the more necessary —
+        without waiting for statutory compulsion.</p>
+      <p>This is an offer of <strong>trust infrastructure</strong>, not of police surveillance.</p>
+    </div>
+
+    <h2>(3) The three K0NSULT layers applied to Argentina <span class="tag n">MODEL / NARRATIVE</span></h2>
+    <p>The K0NSULT model is a set of <strong>3 layers</strong> (Identity → Reputation/Proof → Oversight). Below they are mapped
+      onto the Argentine case of "agent-companies".</p>
+    <div class="tbl-scroll"><table>
+      <caption>Mapping of the model's layers onto the "agent-companies" case. A proposal, not a deployed state.</caption>
+      <thead><tr><th>#</th><th>Layer</th><th>Application in Argentina</th><th>Class</th></tr></thead>
+      <tbody>
+        <tr><td><span class="item">①</span></td><td><span class="item">Identity</span></td><td class="m"><code>did:k0nsult:agent:*</code> for agent-companies; binding to the model and to the human beneficiary.</td><td><span class="tag n">MODEL</span></td></tr>
+        <tr><td><span class="item">②</span></td><td><span class="item">Reputation / Proof</span></td><td class="m">Soulbound (not money) + claim ≤ proof + an agent decision audit trail (SHA-256).</td><td><span class="tag n">MODEL</span></td></tr>
+        <tr><td><span class="item">③</span></td><td><span class="item">Oversight</span></td><td class="m">Human Override Always + Art. 50 (AI labelling) + beneficiary transparency; zero scoring of natural persons.</td><td><span class="tag n">MODEL</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>① Agent identity — DID</h3>
+    <ul>
+      <li>Every <strong>company managed by an AI agent</strong> receives a decentralised identifier:
+        <code>did:k0nsult:agent:*</code> (e.g. <code>did:k0nsult:agent:ar-&lt;hash&gt;</code>).</li>
+      <li>The DID binds the agent to: the model/version it runs on (technical accountability); the <strong>human
+        beneficiary</strong> (beneficiary transparency in the oversight layer); the scope of authority (what the agent may do
+        on the company's behalf).</li>
+      <li>Effect: <strong>legal responsibility ceases to be indeterminate.</strong> An agent without an identity is an
+        accountability gap; an agent with a DID is an address to which an action and its effect can be attributed.</li>
+    </ul>
+
+    <h3>② Reputation / Proof — soulbound + claim ≤ proof + audit trail</h3>
+    <ul>
+      <li><strong>Soulbound reputation</strong> — non-transferable, bound to the agent's DID. It <strong>is not money</strong>
+        and is not tradable: it cannot be bought or transferred, so it creates no market in "reputation for sale".</li>
+      <li><strong>claim ≤ proof</strong> — an agent (and a company) may claim only as much as it can prove. Any claim without
+        proof is explicitly tagged GAP/ROADMAP, not as fact.</li>
+      <li><strong>Agent decision audit trail</strong> — key decisions recorded with a <strong>SHA-256 hash</strong>
+        (non-repudiation without disclosing sensitive content). It allows <strong>post factum</strong> verification of what the
+        agent did, when and on what basis — without trusting anyone's word.</li>
+    </ul>
+
+    <h3>③ Oversight — Human Override + Art. 50 + beneficiary transparency</h3>
+    <ul>
+      <li><strong>Human Override Always</strong> — the human remains the superior instance over the agent. Every agent-company
+        has a defined <strong>point of human halt / override</strong> of a decision. AI is not the last instance.</li>
+      <li><strong>Art. 50 (AI labelling)</strong> — actions and communications generated by the agent are <strong>labelled as
+        AI</strong>. The counterparty knows it is talking to / contracting with an agent, not a human. (Aligned with the spirit
+        of AI Act Art. 50, here as a voluntary standard.)</li>
+      <li><strong>Human beneficiary transparency</strong> — this connects directly with the third pillar of Milei's draft
+        (disclosure of beneficial owners): behind every agent-company stands an <strong>identified responsible
+        person/entity</strong>, visible in the identity layer.</li>
+      <li><strong>Zero scoring of natural persons</strong> — the oversight layer concerns <strong>agents and their
+        decisions</strong>, never the assessment/scoring of people. This is a hard boundary of the model.</li>
+    </ul>
+
+    <h2>(4) Why this fits the openness and boldness of Argentina's decision <span class="tag n">MODEL / NARRATIVE</span></h2>
+    <p>Without flattery — the substantive argument:</p>
+    <ul>
+      <li><strong>Open source = sovereignty, not dependence on big tech.</strong> A country betting on bold deregulation risks
+        de facto handing its trust infrastructure to closed platforms (proprietary trust). An open oversight layer is
+        <strong>locally controlled, auditable and cannot be cut off</strong> by a single vendor.</li>
+      <li><strong>Deregulation + open accountability = investment credibility.</strong> Capital enters more readily where it is
+        possible to <strong>prove</strong> what autonomous entities do. An evidence layer lowers counterparty risk without
+        reinstating heavy regulation.</li>
+      <li><strong>The VOC analogy cuts both ways.</strong> The East India Company was an organisational breakthrough — but
+        history also showed the costs of unaccountable concentrated power. An open oversight layer is
+        <strong>learning the lesson of that prototype</strong>, not naively repeating it.</li>
+      <li><strong>Regulatory boldness gains a technical counterpoint.</strong> "Unregulated" at state level need not mean
+        "untraceable" at infrastructure level. These are two different axes — and K0NSULT operates on the second.</li>
+    </ul>
+
+    <h2>(5) GAPs and limits — stated honestly</h2>
+    <p>This is a model, not a mandate. We declare plainly:</p>
+    <div class="tbl-scroll"><table>
+      <caption>Explicit limits of the model. Every entry is carried over from section 5 of the model document.</caption>
+      <thead><tr><th>Limit</th><th>Content</th><th>Class</th></tr></thead>
+      <tbody>
+        <tr><td><span class="item">A proposal, not an obligation</span></td><td class="m">K0NSULT has no regulatory mandate in Argentina and claims none. Adoption depends solely on voluntary uptake.</td><td><span class="tag g">GAP</span></td></tr>
+        <tr><td><span class="item">Legal liability of agents</span></td><td class="m">An unresolved area. DIDs and audit trails <strong>help attribute</strong> an action, but the ultimate liability framework is set by the legislator/court, not by a technical layer. This is a GAP, not solved.</td><td><span class="tag g">GAP</span></td></tr>
+        <tr><td><span class="item">Abuse risk without a trust layer</span></td><td class="m">Deregulation without a trust layer = a real risk of abuse (laundering of responsibility through an agent-entity, no decision trail, information asymmetry towards the counterparty). Our thesis addresses this risk but does not eliminate it without adoption.</td><td><span class="tag g">GAP</span></td></tr>
+        <tr><td><span class="item">Sensitivity of the area</span></td><td class="m">AI in the management of a business entity is a sensitive area. The model deliberately keeps Human Override and zero scoring of persons as inviolable safeguards.</td><td><span class="tag g">GAP</span></td></tr>
+        <tr><td><span class="item">No deployment verification</span></td><td class="m">As of today <strong>no K0NSULT pilot exists within the Argentine legal order</strong> — all claims of effectiveness are ROADMAP, not PROOF.</td><td><span class="tag g">GAP</span></td></tr>
+        <tr><td><span class="item">Risk of political over-reading</span></td><td class="m">This document neither endorses nor criticises the policy of the government of Argentina — it describes where an <strong>open oversight layer</strong> could plug in, should anyone decide to use it.</td><td><span class="tag g">GAP</span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>(6) The doctrine held in every sentence</h2>
+    <div class="box">
+      <p>Human Override Always (human above AI) · claim ≤ proof · Art. 50 (AI labelling) · DID of agent identity ·
+        soulbound reputation (not money) · SHA-256 audit · <strong>zero scoring of natural persons</strong>.</p>
+    </div>
+
+    <h2>(7) Sources and references</h2>
+    <ul>
+      <li><strong>Source article:</strong> cyberdefence24.pl — "Argentina, the first AI haven" (a report on Milei's draft bill,
+        end of May 2026). <span class="tag g">GAP</span> — the model document gives the publisher and the title but no direct
+        URL; we do not invent one here.</li>
+      <li><strong>K0NSULT doctrinal layer:</strong> <a href="https://k0nsult.cloud/ai-truth">k0nsult.cloud/ai-truth</a>.</li>
+      <li><strong>Comparative context:</strong> the EU AI Act (Art. 50 — the obligation to label AI content), as a reference
+        point for a voluntary labelling standard.</li>
+    </ul>
+
+    <div class="box warn">
+      <h3>Evidence classification of the whole</h3>
+      <p>Section 1 = <strong>facts cited from the source</strong>. Sections 2–4 = <strong>thesis/model</strong> (NARRATIVE +
+        proposal, not a claim of fact). Section 5 = <strong>explicit GAPs</strong>. <strong>No sentence of this document claims
+        that the model is deployed or adopted.</strong></p>
+    </div>
+
+    <div class="xlinks">
+      <a href="/ai-truth/argentyna">🇵🇱 Wersja polska</a>
+      <a href="/ai-truth/kamerun/en">🌍 Another Continent — Cameroon</a>
+      <a href="/ai-truth/unia">🇪🇺 EU Track</a>
+      <a href="/ai-truth">📡 AI Truth — home</a>
+    </div>
+
+    <div class="disclaimer">
+      <b>Disclaimer (CCO).</b> The "Argentina / South America" pillar is an <b>open model / proposal</b> by
+      K0NSULT Sp. z o.o. (KRS 0001239441), published open-source. It is <b>NOT a public authority of any state, an agency or a
+      public institution</b>; it is not an investment rating nor legal advice. It is <b>not a deployed service</b> — as of today
+      no K0NSULT pilot exists within the Argentine legal order. This page does not claim that AI governs any state, nor that the
+      government of Argentina has adopted the K0NSULT model. The description of the draft bill is a report from the indicated
+      press source — submitting a bill ≠ enacting ≠ implementing. In binding matters the primary source and the position of the
+      competent authority prevail.
+    </div>
+  </main>
+
+  <footer>
+    K0NSULT Sp. z o.o. · KRS 0001239441 · AI Truth Portal · Global (non-EU) track — Argentina pillar · claim &le; proof ·
+    <a href="/ai-truth">back to AI Truth</a> · <a href="/ai-truth/kamerun/en">Cameroon</a> · <a href="/ai-truth/unia">EU track</a>
+  </footer>
+</body>
+</html>
